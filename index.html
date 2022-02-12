@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BKFC-THPT Thanh Tuyền</title>
+        <meta charset="utf-8">
+        <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    </head>
+    <style>
+        body {
+            background: #e1f9ff;
+        }
+        @media screen and (max-width: 2000px) {
+
+}
+@media screen and (max-width: 480px) {
+
+}
+        #tenchuongtrinh {
+            text-align: center;
+            color: red;
+            font-weight: 900;
+            margin-bottom: 5px;
+            line-height: 4px;
+        }
+        #gioithieu {
+            text-align: justify;
+            font-style: italic;
+            font-weight: 300;
+            background: rgb(89, 176, 248);
+            color: black;
+            padding: 0.5px 15px 10px 15px;
+            line-height: 24px;
+            margin: 10px;
+        }
+        #question {
+            padding-top: 00.5px;
+            padding-bottom: 0.5px;
+            text-align: center;
+            line-height: 24px;
+            margin: auto;
+        }
+        #test-form {
+            text-align: center;
+        }
+        #page {
+            margin: 10px;
+            
+            
+        }
+        #thongtin {
+            line-height: 24px;
+            
+            
+            text-align: justify;
+        }
+        #chittiet {
+            
+            
+            font-weight: 600;
+        }
+        #loikhuyen {
+            
+            line-height: 24px;
+            text-align: justify;
+        }
+        #dgnl {
+            
+            padding-top: 0.5px;
+            padding-bottom: 00.5px;
+            background: rgb(112, 182, 248);
+        }
+    </style>
+<body>
+    <div id="tenchuongtrinh">
+        <h1>BKFC-Tôi Yêu Bách Khoa</h1>
+        <hr width="20%" size="3px" colo" align="center" >
+    </div>
+    <div>
+        <div id="gioithieu">
+            <p>- <a style="color: black;" href="https://www.facebook.com/toiyeubachkhoahcm">BK FC - Tôi Yêu Bách Khoa</a> là chương trình tư vấn hướng nghiệp cho học sinh, trực thuộc Câu lạc bộ Đại sứ Bách khoa, do Văn phòng Tư vấn Tuyển sinh trường Đại học Bách khoa - ĐHQG TPHCM quản lý. Nhân dịp Tết đến, <a style="color: black;" href="https://www.facebook.com/BKFCThanhTuyen">BKFC- THPT Thanh Tuyền</a> với các thành viên nòng cốt là cựu học sinh mong muốn được quay trở về trường để tri ân Thầy Cô. Đồng thời, với chút kiến thức và kinh nghiệm có được trong thời gian qua, các anh chị tình nguyện chia sẻ cho đàn em đang học tại trường, giúp các em tháo gỡ những thắc mắc trong thi cử, học hành và các vấn đề về môi trường học tập tại trường Đại học Bách Khoa – ĐHQG TPHCM. <br> - <a style="color: black;" href="http://tuyensinh.hcmut.edu.vn/admission/">Trường Đại học Bách Khoa - ĐHQG-HCM</a> là sựa lựa chọn của không ít học sinh sau khi tốt nghiệp THPT. Có nhiều lý do để các bạn mơ ước điều này, trong đó tỷ lệ có việc làm ổn định sau khi tốt nghiệp đại học là nguyên nhân chính để các em học sinh phấn đấu đạt được điều các em mong muốn. Tuy nhiên, vẫn còn nhiều học sinh e ngại bởi "học Bách Khoa rất khó" và nhiều tâm tư khác khiến các em không dám mơ ước dù cho các em có đủ thực lực để làm một sinh viên của Trường. <br>- Thông qua buổi trò chuyện lần này, Cựu học sinh THPT Thanh Tuyền hi vọng các em học sinh khối 12 sẽ hiểu về các ngành nghề kỹ thuật, kinh tế phù hợp với năng lực và sở thích.</p>
+        </div>   
+    </div>
+    <div id="question">
+        <p style="font-weight: 600; color: red; font-size: 23px;">Nếu em có bất kì thắc mắc nào thì các em hãy điền bên dưới nhe!</p>
+        <form id="test-form" method="GET" action="https://script.google.com/macros/s/AKfycbxaP7HtoT3MPC3eIXagbTmrTrX570Hj-fLTVW41SE-wd3iIlVGbH9eMFr2KnQYLruF_yw/exec">
+            <textarea name="truong_so_1" rows="5" cols="30" placeholder="Điền câu hỏi vào đây nheee"></textarea>
+            <br>
+            <input type="url" name="truong_so_2" placeholder="Thông tin liên hệ">
+            <br>
+            <button type="submit"id="submit-form">Gửi</button>
+         </form> 
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript">
+         $(document).ready(function()
+         { 
+           var submit = $("button[type='submit']");
+           submit.click(function()
+                       {
+                          var data = $('form#test-form').serialize();
+                          $.ajax({
+                                    type : 'GET', 
+                                    url : 'https://script.google.com/macros/s/AKfycbxaP7HtoT3MPC3eIXagbTmrTrX570Hj-fLTVW41SE-wd3iIlVGbH9eMFr2KnQYLruF_yw/exec',
+                                    dataType:'json',
+                                    crossDomain : true,
+                                    data : data,
+                                    success : function(data)
+                                  { 
+                          if(data == 'false') 
+                                  {
+                                     alert('Thêm không thành công, bạn cũng có thể sử dụng để hiển thị Popup hoặc điều hướng');
+                                  }else{
+                                     alert('Anh đã nhận được câu hỏi của em rồi nè!');
+                                  }
+                       }
+            });
+            return false;
+           });
+         });
+        </script>
+    </div>
+    <div id="chittiet">
+        <p>Thông tin chi tiết về trường Đại học Bách Khoa - Đại học Quốc Gia Thành phố Hồ Chí Minh</p>
+        <a href="http://tuyensinh.hcmut.edu.vn/admission/index.php?route=catalog/chitietts&path=64_174&tid=1844">Truy cập vào đây để xem thông tin giới thiệu về trường nè.</a>
+    </div>
+    <div id="thongtin">
+        <p style="font-weight: 600;"> Phương thức xét tuyển năm 2022 Đại học Bách Khoa – ĐHQG TP HCM: </p>
+        <ol>
+            <li>Xét tuyển thẳng.</li>
+            <li>Ưu tiên xét tuyển.</li>
+            <li>Xét tuyển thí sinh có chứng chỉ tuyển sinh quốc tế hoặc thí sinh nước ngoài (chỉ áp dụng cho chương trình chất lượng cao, Tiên tiến).</li>
+            <li>Xét tuyển thí sinh dự tính du học nước ngoài vào chương trình Chuyển tiếp Quốc tế.</li>
+            <li>Xét tuyển kết hợp nhiều tiêu chí bao gồm: kết quả thi ĐGNL, kết quả thi Tốt nghiệp THPT, điểm học THPT, năng lực khác (chứng chỉ, giải thưởng), hoạt động xã hội (thể thao, văn hoá).</li>
+            <a style="font-weight: 600;" href="http://tuyensinh.hcmut.edu.vn/admission/index.php?route=catalog/chitietts&path=64_66&tid=1849">Nhấn vào đây để biết rõ hơn về các phương thức xét tuyển.</a>
+            <br>
+            <a style="font-weight: 600;" href="http://tuyensinh.hcmut.edu.vn/admission/index.php?route=catalog/chitietts&path=64_71&tid=1843">Nhấn vào đây để biết về các ngành tuyển sinh nhe.</a>
+        </ol>
+    </div>
+    <div id="loikhuyen">
+        <h3>Một vài lời khuyên của anh chị nè:</h3>
+        <ul>
+            <li>Đại học Quốc gia TP Hồ Chí Minh hàng năm có tổ chức một kì thi Đánh giá năng lực. Với kiến thức là tất cả các môn học ở phổ thông (11 môn). Anh chị hi vọng các em tìm hiểu về kì thi này và đăng kí thi, vì hiện nay rất nhiều trường đã sử dụng kết quả của kì thi ĐGNL này xét tuyển. Theo như như kinh nghiệm của anh chị thì xét tuyển bằng phương thức ĐGNL dễ đậu hơn xét tuyển điểm THPTQG. Bên cạnh đó do kì thi này diễn ra trước và có kết quả xét tuyển trước khi thi THPTQG nên các em đã đậu bằng phương thức xét tuyển ĐGNL thì sẽ giảm một phần áp lực hơn đối với kì thi THPTQG. Còn đối với kì thi THPTQG thì số lượng thí sinh rất là đông nên tỉ lệ chọi cao hơn hẳn tất cả các phương thức khác. </li>
+            <li>Hiện nay không có giới hạn số lượng phương thức xét tuyển đối với mỗi thí sinh, do đó các em đăng kí nhiều phương thức xét tuyển sẽ tăng thêm cơ hội đậu hơn.</li>
+            <li>Đối với các bạn hiện tại có kiến thức môn tiếng anh tốt thì nên thi lấy bằng IELTS, toeic,…. Nếu các em có bằng tiếng anh thì đó sẽ là một lợi thế không nhỏ, đặc biệt sẽ được nhiều trường xét tuyển thẳng và cấp học bổng nếu có điểm IELTS cao.</li>
+        </ul>
+    </div>
+    <div id="dgnl">
+        <h3>Thông tin chi tiết về kì thi Đánh giá năng lực: <a href="http://cete.vnuhcm.edu.vn/thi-danh-gia-nang-luc.html"> Đây nhe!</a> <br>
+            <a href="https://drive.google.com/drive/u/0/folders/1ih_Rpy6eHkKacKhUfD_irmS0Ldzv5xld?fbclid=IwAR1gVHEulFdjW94sj5nEeffP8S6XfQ4L_djruOf73Rw2oK9SAn6rT7kldi8">Đề minh hoạ kì thi ĐGNL 2022.</a>
+        </h3>
+        <h3>Tài liệu ôn thi IELTS: <a href="https://drive.google.com/drive/folders/1SnMmSar0rrmbeu6Q1IjtFV2jjFSOapRt?usp=sharing">Ở đây nè kk</a></h3> 
+        <h3>Tài liệU ôn thi Toeic: <a href="https://drive.google.com/drive/folders/1Fp_n8xA4Pb5-zkwMnihC3tnxYeFHEpVE?usp=sharing">Ở đây nè kk</a></h3>
+    </div>
+    <div id="page">
+        <h3>Theo dõi fanpage để luôn được cập nhật những thông tin mới nhất nhe! Hehe</h3>
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBKFCThanhTuyen&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <br>
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftuvantuyensinhbachkhoa&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="600" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
+    <div>
+        <ul>
+            <li><a href="https://www.facebook.com/nghianhaan/">Facebook cá nhân</a></li>
+            <li>Email: nhan.tocokhi@hcmut.edu.vn</li>
+        </ul>
+    </div>
+</body>
+</html>
